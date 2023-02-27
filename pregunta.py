@@ -17,5 +17,10 @@ def ingest_data():
     #
     # Inserte su código aquí
     #
-
+    df = pd.read_csv('clusters_report.txt', sep=':', header=None, names=['cluster', 'keywords'])
+    df['keywords'] = df['keywords'].str.replace(' ', '')
+    df['keywords'] = df['keywords'].str.split(',')
+    df['cluster'] = df['cluster'].str.lower()
+    df['cluster'] = df['cluster'].str.replace(' ', '_')
+    
     return df

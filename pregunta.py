@@ -54,4 +54,4 @@ def ingest_data():
     dataframe['cantidad_de_palabras_clave'] = dataframe['cantidad_de_palabras_clave'].astype('int64')
     dataframe['porcentaje_de_palabras_clave'] = dataframe['porcentaje_de_palabras_clave'].astype('float64')
     
-    return df
+    return dataframe
